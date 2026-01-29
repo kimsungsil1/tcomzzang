@@ -148,13 +148,14 @@
   position: relative;
   display: grid;
   gap: 1.5rem;
+  justify-items: end;
 }
 
 .hero-visual img {
-  width: 100%;
+  width: min(520px, 100%);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.03);
-  padding: 1.5rem;
+  padding: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -176,7 +177,7 @@
 }
 
 .hero-thumb {
-  width: 55%;
+  width: min(320px, 55%);
   border-radius: 18px;
   margin-left: auto;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -352,7 +353,7 @@
 
 .gallery-item img {
   width: 100%;
-  height: 220px;
+  height: 190px;
   object-fit: cover;
 }
 
@@ -445,6 +446,10 @@
 
   .hero-card {
     position: static;
+  }
+
+  .hero-visual {
+    justify-items: stretch;
   }
 
   .hero-thumb {
