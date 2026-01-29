@@ -430,11 +430,13 @@
   .site-header {
     grid-template-columns: 1fr;
     border-radius: 24px;
+    padding: 1rem;
   }
 
   .site-nav {
     flex-wrap: wrap;
     justify-content: flex-start;
+    row-gap: 0.6rem;
   }
 
   .header-cta {
@@ -456,15 +458,60 @@
 
 @media (max-width: 720px) {
   .page {
-    padding: 1.5rem 5vw 3rem;
+    padding: 1.25rem 5vw 2.5rem;
   }
 
   .site-header {
     position: static;
+    gap: 1rem;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .header-cta {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-card {
+    width: 100%;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    gap: 2rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+  }
+
+  .hero-meta {
+    gap: 1rem;
+  }
+
+  .hero-visual img {
+    padding: 1rem;
+  }
+
+  .gallery-item img {
+    height: 180px;
   }
 }
