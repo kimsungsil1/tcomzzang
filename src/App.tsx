@@ -1,9 +1,28 @@
 import { useState } from 'react'
-import heroImage from './assets/backlight.svg'
 import './App.css'
 
 function App() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+  const baseUrl = import.meta.env.BASE_URL
+  const heroImage = `${baseUrl}images/main/hero.jpg`
+  const mainImage = `${baseUrl}images/main/main.jpg`
+  const beforeAfterImages = [
+    { src: `${baseUrl}images/before-after/before.jpg`, label: '수리 전' },
+    { src: `${baseUrl}images/before-after/after.jpg`, label: '수리 후' },
+  ]
+  const processImages = [
+    { src: `${baseUrl}images/process/process.jpg`, label: '패널 분해' },
+    { src: `${baseUrl}images/process/process1.jpg`, label: 'LED 점검' },
+    { src: `${baseUrl}images/process/process2.jpg`, label: '밝기 테스트' },
+  ]
+  const partsImages = [
+    { src: `${baseUrl}images/parts/part.jpg`, label: 'LED 바 부품' },
+    { src: `${baseUrl}images/parts/part1.jpg`, label: '테스터 장비' },
+  ]
+  const reviewImages = [
+    { src: `${baseUrl}images/review/review.jpg`, label: '고객 후기' },
+    { src: `${baseUrl}images/review/review1.jpg`, label: '재방문 후기' },
+  ]
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -43,6 +62,7 @@ function App() {
         <nav className="site-nav">
           <a href="#services">서비스</a>
           <a href="#process">진행</a>
+          <a href="#gallery">갤러리</a>
           <a href="#pricing">견적</a>
           <a href="#faq">FAQ</a>
           <a href="#intake">접수</a>
@@ -97,7 +117,7 @@ function App() {
           <div className="hero-visual">
             <img
               src={heroImage}
-              alt="TV 백라이트 수리 전후를 상징하는 빛의 바 이미지"
+              alt="TV 백라이트 수리 현장 메인 이미지"
               loading="lazy"
             />
             <div className="hero-card">
@@ -108,6 +128,12 @@ function App() {
                 <li>깜빡임, 밝기 불안정</li>
               </ul>
             </div>
+            <img
+              className="hero-thumb"
+              src={mainImage}
+              alt="TV 백라이트 수리 작업 이미지"
+              loading="lazy"
+            />
           </div>
         </section>
 
@@ -193,6 +219,55 @@ function App() {
               <span>04</span>
               <h3>완료 안내</h3>
               <p>수리 결과 공유 및 보증 안내, 배송 또는 방문 설치.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="gallery" className="section gallery">
+          <div className="section-header">
+            <p className="eyebrow">갤러리</p>
+            <h2>실제 수리 현장 사진</h2>
+            <p>수리 전후, 작업 과정, 사용 부품과 고객 후기를 확인하세요.</p>
+          </div>
+          <div className="before-after">
+            {beforeAfterImages.map((item) => (
+              <figure className="gallery-item" key={item.src}>
+                <img src={item.src} alt={`TV 백라이트 ${item.label}`} loading="lazy" />
+                <figcaption>{item.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="gallery-block">
+            <h3>수리 과정</h3>
+            <div className="gallery-grid">
+              {processImages.map((item) => (
+                <figure className="gallery-item" key={item.src}>
+                  <img src={item.src} alt={`TV 백라이트 수리 과정: ${item.label}`} loading="lazy" />
+                  <figcaption>{item.label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+          <div className="gallery-block">
+            <h3>부품 · 장비</h3>
+            <div className="gallery-grid two">
+              {partsImages.map((item) => (
+                <figure className="gallery-item" key={item.src}>
+                  <img src={item.src} alt={`백라이트 부품: ${item.label}`} loading="lazy" />
+                  <figcaption>{item.label}</figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+          <div className="gallery-block">
+            <h3>고객 후기</h3>
+            <div className="gallery-grid two">
+              {reviewImages.map((item) => (
+                <figure className="gallery-item" key={item.src}>
+                  <img src={item.src} alt={`고객 후기 이미지: ${item.label}`} loading="lazy" />
+                  <figcaption>{item.label}</figcaption>
+                </figure>
+              ))}
             </div>
           </div>
         </section>
