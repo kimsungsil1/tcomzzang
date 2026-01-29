@@ -48,7 +48,7 @@ function App() {
           <a href="#intake">접수</a>
         </nav>
         <div className="header-cta">
-          <a className="button ghost" href="tel:010-0000-0000">
+          <a className="button ghost" href="tel:010-2117-0633">
             전화 문의
           </a>
           <a className="button solid" href="#intake">
@@ -284,7 +284,7 @@ function App() {
             </label>
             <label>
               연락처
-              <input name="phone" type="tel" placeholder="010-0000-0000" required />
+              <input name="phone" type="tel" placeholder="010-2117-0633" required />
             </label>
             <label>
               TV 모델명
@@ -317,8 +317,8 @@ function App() {
             <div className="contact-card">
               <h3>긴급 문의</h3>
               <p>상담 가능 시간: 09:00 ~ 20:00</p>
-              <a className="button ghost" href="tel:010-0000-0000">
-                010-0000-0000
+              <a className="button ghost" href="tel:010-2117-0633">
+                010-2117-0633
               </a>
               <p className="small">문자/카카오 상담도 가능합니다.</p>
             </div>
@@ -337,7 +337,7 @@ function App() {
           <p>사업자명/주소/사업자번호는 실제 정보로 교체해 주세요.</p>
         </div>
         <div className="footer-links">
-          <a href="tel:010-0000-0000">전화</a>
+          <a href="tel:010-2117-0633">전화</a>
           <a href="mailto:help@lightfix.co.kr">이메일</a>
           <a href="#intake">접수</a>
         </div>
