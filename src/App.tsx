@@ -29,7 +29,7 @@ function App() {
           <div className="brand">
             <span className="brand-mark">BL</span>
             <div>
-              <p className="brand-name">라이트픽스 TV 백라이트 수리</p>
+              <p className="brand-name">티컴짱 TV 백라이트 수리</p>
               <p className="brand-sub">TV 화면 어둡거나 깜빡임? 당일 진단 · 합리적 수리</p>
             </div>
           </div>
@@ -425,8 +425,8 @@ function App() {
       <footer className="site-footer">
         <div className="container footer-inner">
           <div>
-            <p className="brand-name">라이트픽스 TV 백라이트 수리</p>
-            <p>사업자명/주소/사업자번호는 실제 정보로 교체해 주세요.</p>
+            <p className="brand-name">티컴짱 TV 백라이트 수리</p>
+            <p>경기도 안양시 만안구 안양로 323번길 17, 3층</p>
           </div>
           <div className="footer-links">
             <a href="tel:010-2117-0633">전화</a>
