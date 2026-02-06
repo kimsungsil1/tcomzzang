@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
   const baseUrl = import.meta.env.BASE_URL
   const heroImage = `${baseUrl}images/main/hero.jpg`
   const mainImage = `${baseUrl}images/main/main.jpg`
@@ -23,31 +21,6 @@ function App() {
     { src: `${baseUrl}images/review/review.jpg`, label: '고객 후기' },
     { src: `${baseUrl}images/review/review1.jpg`, label: '재방문 후기' },
   ]
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    if (status === 'submitting') return
-
-    const form = event.currentTarget
-    const formData = new FormData(form)
-    const payload = Object.fromEntries(formData.entries())
-
-    try {
-      setStatus('submitting')
-      const response = await fetch('/api/intake', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      if (!response.ok) {
-        throw new Error('Request failed')
-      }
-      setStatus('success')
-      form.reset()
-    } catch (error) {
-      setStatus('error')
-    }
-  }
 
   return (
     <div className="page">
@@ -351,11 +324,19 @@ function App() {
             <h2>TV 백라이트 수리 접수폼</h2>
             <p>접수 내용을 확인 후 24시간 내 안내드립니다.</p>
           </div>
-          <form className="intake-form" onSubmit={handleSubmit}>
+          <form
+            className="intake-form"
+            action="https://formspree.io/f/xaqdwvzk"
+            method="POST"
+          >
             <input type="text" name="company" tabIndex={-1} autoComplete="off" />
             <label>
               성함
               <input name="name" type="text" placeholder="홍길동" required />
+            </label>
+            <label>
+              이메일
+              <input name="email" type="email" placeholder="name@example.com" required />
             </label>
             <label>
               연락처
@@ -368,7 +349,7 @@ function App() {
             <label>
               증상 설명
               <textarea
-                name="issue"
+                name="message"
                 rows={4}
                 placeholder="화면이 어둡고, 오른쪽이 깜빡입니다."
                 required
@@ -379,14 +360,8 @@ function App() {
               <input name="schedule" type="text" placeholder="예: 2월 5일 오후" />
             </label>
             <button className="button solid" type="submit">
-              {status === 'submitting' ? '접수 중...' : '접수하기'}
+              접수하기
             </button>
-            {status === 'success' && (
-              <p className="form-note success">접수가 완료되었습니다. 곧 연락드리겠습니다.</p>
-            )}
-            {status === 'error' && (
-              <p className="form-note error">접수에 실패했습니다. 전화 문의 부탁드립니다.</p>
-            )}
           </form>
           <div className="intake-side">
             <div className="contact-card">

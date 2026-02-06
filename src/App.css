@@ -4,9 +4,7 @@
   flex-direction: column;
   gap: 4rem;
   padding: 2.5rem 5vw 3.5rem;
-  background: radial-gradient(circle at top, rgba(255, 215, 110, 0.25), transparent 60%),
-    radial-gradient(circle at 20% 20%, rgba(92, 214, 255, 0.2), transparent 55%),
-    var(--color-bg);
+  background: var(--color-bg);
 }
 
 .site-header {
@@ -19,9 +17,9 @@
   z-index: 5;
   padding: 1rem 1.5rem;
   border-radius: 999px;
-  background: rgba(10, 12, 16, 0.7);
-  backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
 }
 
 .brand {
@@ -36,8 +34,8 @@
   width: 48px;
   height: 48px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #ffd66d, #ff8c52);
-  color: #101010;
+  background: #111111;
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -83,18 +81,18 @@
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .button.solid {
-  background: linear-gradient(135deg, #ffd66d, #ff8c52);
-  color: #101010;
+  background: #111111;
+  color: #ffffff;
 }
 
 .button.ghost {
   background: transparent;
-  border-color: rgba(255, 255, 255, 0.2);
-  color: var(--color-text);
+  border-color: rgba(17, 17, 17, 0.25);
+  color: #111111;
 }
 
 .hero {
@@ -154,20 +152,21 @@
 .hero-visual img {
   width: min(520px, 100%);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.03);
+  background: #ffffff;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(17, 17, 17, 0.12);
 }
 
 .hero-card {
   position: absolute;
   right: 1rem;
   bottom: -2rem;
-  background: rgba(18, 20, 25, 0.95);
+  background: #ffffff;
   padding: 1.2rem 1.4rem;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(17, 17, 17, 0.12);
   width: min(280px, 80%);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
 }
 
 .hero-card ul {
@@ -180,8 +179,8 @@
   width: min(320px, 55%);
   border-radius: 18px;
   margin-left: auto;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
 .section {
@@ -215,18 +214,18 @@
 .card,
 .price-card,
 .contact-card {
-  background: rgba(18, 20, 25, 0.92);
+  background: #ffffff;
   border-radius: 20px;
   padding: 1.6rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
 }
 
 .highlight {
   padding: 2.5rem;
   border-radius: 30px;
-  background: linear-gradient(140deg, rgba(255, 214, 109, 0.15), rgba(92, 214, 255, 0.12));
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f5f5f5;
+  border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .checklist {
@@ -269,8 +268,8 @@
 }
 
 .price-card.featured {
-  border: 1px solid rgba(255, 214, 109, 0.6);
-  box-shadow: 0 24px 50px rgba(255, 214, 109, 0.15);
+  border: 1px solid rgba(17, 17, 17, 0.4);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.12);
 }
 
 .price {
@@ -292,15 +291,15 @@
 .region-tags span {
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #f1f1f1;
+  border: 1px solid rgba(17, 17, 17, 0.12);
 }
 
 .faq details {
-  background: rgba(18, 20, 25, 0.92);
+  background: #ffffff;
   border-radius: 16px;
   padding: 1rem 1.4rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 
 .faq details + details {
@@ -345,10 +344,10 @@
 
 .gallery-item {
   margin: 0;
-  background: rgba(18, 20, 25, 0.92);
+  background: #ffffff;
   border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(17, 17, 17, 0.1);
 }
 
 .gallery-item img {
@@ -380,26 +379,13 @@
   margin-top: 0.4rem;
   padding: 0.8rem 1rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(15, 17, 22, 0.9);
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  background: #ffffff;
   color: var(--color-text);
 }
 
 .intake-form input[type='text'][name='company'] {
   display: none;
-}
-
-.form-note {
-  margin: 0;
-  font-weight: 600;
-}
-
-.form-note.success {
-  color: #98f5a2;
-}
-
-.form-note.error {
-  color: #ff9b9b;
 }
 
 .contact-card {
@@ -418,7 +404,7 @@
   gap: 1.5rem;
   justify-content: space-between;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   color: var(--color-muted);
 }
 
